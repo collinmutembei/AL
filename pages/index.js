@@ -1,7 +1,31 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import { getTokenOrRefresh } from "@/lib/token";
+import { ResultReason } from "microsoft-cognitiveservices-speech-sdk";
+import styles from "@/styles/Home.module.css";
 
-export default function Home() {
+const speechsdk = require("microsoft-cognitiveservices-speech-sdk");
+
+export default async function Home() {
+  const tokenObj = await getTokenOrRefresh();
+  const speechConfig = speechsdk.SpeechConfig.fromAuthorizationToken(
+    tokenObj.authToken,
+    tokenObj.region
+  );
+  speechConfig.speechRecognitionLanguage = "en-US";
+
+  const audioConfig = speechsdk.AudioConfig.fromDefaultMicrophoneInput();
+  const recognizer = new speechsdk.SpeechRecognizer(speechConfig, audioConfig);
+
+  let sttFromMic = recognizer.recognizeOnceAsync((result) => {
+    if (result.reason === ResultReason.RecognizedSpeech) {
+      console.log(`RECOGNIZED: Text=${result.text}`);
+    } else {
+      console.log(
+        "ERROR: Speech was cancelled or could not be recognized. Ensure your microphone is working properly."
+      );
+    }
+  });
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +39,7 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="#" className={styles.card}>
+          <a href="#" className={styles.card} onClick={() => sttFromMic()}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

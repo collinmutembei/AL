@@ -3,7 +3,7 @@ import styles from "@/styles/Home.module.css";
 import { sttFromMic } from "@/lib/speech";
 
 export default function Home() {
-  sttFromMic();
+  await sttFromMic();
   return (
     <div className={styles.container}>
       <Head>

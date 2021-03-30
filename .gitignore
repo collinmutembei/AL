@@ -35,6 +35,3 @@ yarn-error.log*
 
 # editor
 .vscode
-
-# python virtual env
-venv

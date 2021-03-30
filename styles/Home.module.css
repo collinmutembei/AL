@@ -35,24 +35,17 @@
   align-items: center;
 }
 
-.title a {
+.footer a {
   color: #0070f3;
   text-decoration: none;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
   text-decoration: underline;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
 .description {
   text-align: center;
 }
@@ -75,7 +68,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   max-width: 800px;
   margin-top: 3rem;
 }

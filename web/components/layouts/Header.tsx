@@ -9,11 +9,7 @@ const Header = ({ title }) => {
         name="viewport"
         content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
       />
-      <title>
-        {title
-          ? process.env.NEXT_PUBLIC_APP_NAME + " - " + title
-          : process.env.NEXT_PUBLIC_APP_NAME}
-      </title>
+      <title>{title ? "AL" + " - " + title : "AL"}</title>
       <link rel="manifest" href="/manifest.json" />
       <link
         href="/icons/favicon-16x16.png"

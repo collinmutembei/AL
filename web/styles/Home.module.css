@@ -87,7 +87,7 @@
 .card:hover,
 .card:focus,
 .card:active {
-  border-color: #0070f3;
+  border-color: #1f9ded;
 }
 
 .card h3 {
@@ -111,7 +111,7 @@
 .card:hover svg,
 .card:focus svg,
 .card:active svg {
-  fill: #0070f3;
+  fill: #1f9ded;
 }
 
 .logo {

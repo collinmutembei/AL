@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MicrophoneIcon, ChatAltIcon } from "@heroicons/react/outline";
 import Card from "@/components/Card";
 
@@ -9,23 +10,23 @@ const Home = () => {
       </h2>
 
       <div className="flex flex-1 items-center justify-center my-40">
-        <a href="/voice">
-          <Card>
+        <Card>
+          <Link href="/voice">
             <div className="h-32 w-32 flex flex-col items-center justify-center hover:text-blue-500">
               <MicrophoneIcon className="h-8 w-8" />
               <h3 className="font-semibold">Voice</h3>
             </div>
-          </Card>
-        </a>
+          </Link>
+        </Card>
 
-        <a href="/chat">
-          <Card>
+        <Card>
+          <Link href="/chat">
             <div className="h-32 w-32 flex flex-col items-center justify-center hover:text-blue-500">
               <ChatAltIcon className="h-8 w-8" />
               <h3 className="font-semibold">Chat</h3>
             </div>
-          </Card>
-        </a>
+          </Link>
+        </Card>
       </div>
     </section>
   );

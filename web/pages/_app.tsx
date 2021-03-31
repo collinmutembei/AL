@@ -5,6 +5,7 @@ import "@/styles/tailwind.css";
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
+    // @ts-ignore
     const Layout = Component.layout || Page;
 
     return (

@@ -11,14 +11,14 @@ Router.onRouteChangeError = () => NProgress.done();
 
 const Page = ({ title, children }) => {
   return (
-    <div>
+    <>
       <Header title={title} />
       <Nav />
       <div className="container mx-auto h-4/6">
         <main>{children}</main>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

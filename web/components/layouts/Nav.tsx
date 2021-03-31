@@ -3,11 +3,11 @@ import Image from "next/image";
 
 const Nav = () => {
   return (
-    <nav>
+    <header className="flex flex-col justify-center items-center m-4">
       <Link href="/">
         <Image width="50%" height="50%" src={"/logo.png"} alt="logo" />
       </Link>
-    </nav>
+    </header>
   );
 };
 

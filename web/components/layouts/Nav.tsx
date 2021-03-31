@@ -1,10 +1,12 @@
+import Link from "next/link";
 import Image from "next/image";
-import styles from "@/styles/Nav.module.css";
 
 const Nav = () => {
   return (
-    <nav className={styles.navbar}>
-      <Image width="50%" height="50%" src={"/logo.png"} alt="logo" />
+    <nav>
+      <Link href="/">
+        <Image width="50%" height="50%" src={"/logo.png"} alt="logo" />
+      </Link>
     </nav>
   );
 };

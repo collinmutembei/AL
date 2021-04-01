@@ -9,10 +9,10 @@ Router.onRouteChangeStart = () => NProgress.start();
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
-const Page = ({ title, children }) => {
+const Page = ({ children }) => {
   return (
     <>
-      <Header title={title} />
+      <Header />
       <Nav />
       <div className="container mx-auto h-4/6">
         <main>{children}</main>

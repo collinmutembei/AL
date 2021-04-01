@@ -264,6 +264,23 @@ Message Box
 .messageBox .messageSubmit:hover {
   background: #1d7745;
 }
+.voiceChat {
+  padding: 10px;
+}
+
+.voiceChat .messageSubmit {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  float: right;
+  background: #248a52;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none !important;
+}
+.voiceChat .messageSubmit:hover {
+  background: #1d7745;
+}
 
 /*--------------------
 Custom Srollbar

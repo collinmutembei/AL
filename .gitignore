@@ -37,10 +37,12 @@ yarn-error.log*
 .vscode
 
 # workbox pwa stuff
-/public/sw.js*
-/public/workbox-*
+sw.js
+sw.js.map
+workbox-*
 
 # python
 *.pyc
 __pycache__
 */venv
+.env

@@ -1,9 +1,19 @@
-import type { AppProps } from "next/app";
+import App from "next/app";
+import Page from "@/components/layouts/Page";
+import "@/styles/tailwind.css";
 
-import "@/styles/globals.css";
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+    // @ts-ignore
+    const Layout = Component.layout || Page;
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+    return (
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    );
+  }
 }
 
 export default MyApp;

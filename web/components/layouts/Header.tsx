@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const Header = ({ title }) => {
+const Header = () => {
   return (
     <Head>
       <meta charSet="utf-8" />
@@ -9,7 +9,7 @@ const Header = ({ title }) => {
         name="viewport"
         content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
       />
-      <title>{title ? "AL" + " - " + title : "AL"}</title>
+      <title>AL - make every penny worthy</title>
       <link rel="manifest" href="/manifest.json" />
       <link
         href="/icons/favicon-16x16.png"

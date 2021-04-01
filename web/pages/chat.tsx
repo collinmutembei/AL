@@ -1,5 +1,7 @@
+import ChatBox from "@/components/ChatBox";
+
 const Chat = () => {
-  return <div>chatbox</div>;
+  return <ChatBox />;
 };
 
 export default Chat;

@@ -1,5 +1,7 @@
+import VoiceBox from "@/components/VoiceBox";
+
 const Voice = () => {
-  return <div>voicebox</div>;
+  return <VoiceBox />;
 };
 
 export default Voice;

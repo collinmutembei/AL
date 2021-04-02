@@ -1,7 +1,8 @@
 import Image from "next/image";
-import styles from "@/styles/ChatBox.module.css";
+import { MicrophoneIcon } from "@heroicons/react/solid";
+import styles from "@/styles/Chat.module.css";
 
-const ChatBox = () => {
+const VoiceBox = () => {
   return (
     <div className={styles.bg}>
       <div className={styles.chat}>
@@ -15,13 +16,9 @@ const ChatBox = () => {
         <div className={styles.messages}>
           <div className={styles.messagesContent}></div>
         </div>
-        <div className={styles.messageBox}>
-          <textarea
-            className={styles.messageInput}
-            placeholder="Type message..."
-          ></textarea>
-          <button type="submit" className={styles.messageSubmit}>
-            Send
+        <div className={styles.voiceChat}>
+          <button className={styles.messageSubmit}>
+            <MicrophoneIcon className="h-5 w-5" />
           </button>
         </div>
       </div>
@@ -29,4 +26,4 @@ const ChatBox = () => {
   );
 };
 
-export default ChatBox;
+export default VoiceBox;

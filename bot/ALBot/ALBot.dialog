@@ -58,9 +58,9 @@
       "$kind": "Microsoft.OnIntent",
       "$designer": {
         "id": "kmev8s",
-        "name": "connect-account"
+        "name": "review"
       },
-      "intent": "connect-account",
+      "intent": "review",
       "actions": [
         {
           "$kind": "Microsoft.BeginDialog",
@@ -76,9 +76,9 @@
       "$kind": "Microsoft.OnIntent",
       "$designer": {
         "id": "grkPAv",
-        "name": "plan-purchase"
+        "name": "plan"
       },
-      "intent": "plan-purchase",
+      "intent": "plan",
       "actions": [
         {
           "$kind": "Microsoft.BeginDialog",
@@ -98,12 +98,12 @@
     "$kind": "Microsoft.RegexRecognizer",
     "intents": [
       {
-        "intent": "connect-account",
-        "pattern": "Connect Account"
+        "intent": "review",
+        "pattern": "Review my finances"
       },
       {
-        "intent": "plan-purchase",
-        "pattern": "Plan for a purchase"
+        "intent": "plan",
+        "pattern": "Plan my finances"
       }
     ]
   }

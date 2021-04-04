@@ -2,5 +2,37 @@
 
 # SendActivity_SORnwA()
 [Activity
-    Text = What would you like to purchase?
+    Text = What would you like to plan for?
+    SuggestedActions = Food | Transport | Shopping
+]
+
+
+# SendActivity_8Dtiuh()
+[Activity
+    Text = Your food budget for today is 1000 KES.
+]
+
+# SendActivity_KoUEKC()
+[Activity
+    Text = How much do you want to plan for?
+]
+
+# SendActivity_uBNF0I()
+[Activity
+    Text = Your transport budget for today is 500 KES.
+]
+
+# SendActivity_IkAWMr()
+[Activity
+    Text = How much do you want to plan for?
+]
+
+# SendActivity_USRE1x()
+[Activity
+    Text = Your shopping budget for today is 500 KES.
+]
+
+# SendActivity_V52Uz8()
+[Activity
+    Text = How much do you want to plan for?
 ]

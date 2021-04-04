@@ -2,7 +2,7 @@
   "$kind": "Microsoft.AdaptiveDialog",
   "$designer": {
     "id": "vcpUD2",
-    "name": "ConnectAccount",
+    "name": "ReviewFinances",
     "description": "Initiate prompts to connect account"
   },
   "autoEndDialog": true,
@@ -11,7 +11,7 @@
     {
       "$kind": "Microsoft.OnBeginDialog",
       "$designer": {
-        "name": "AccountDetails",
+        "name": "ReviewDuration",
         "description": "",
         "id": "I5cKfI"
       },
@@ -19,14 +19,123 @@
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "s14rXk"
+            "id": "eLaK29"
           },
-          "activity": "${SendActivity_s14rXk()}"
+          "activity": "${SendActivity_eLaK29()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "9JRbXc",
+        "name": "Today"
+      },
+      "intent": "Today",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "GdIJGK"
+          },
+          "activity": "${SendActivity_GdIJGK()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "MtqwIW",
+        "name": "This-week"
+      },
+      "intent": "This-week",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Edstp1"
+          },
+          "activity": "${SendActivity_Edstp1()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "AsNm8g",
+        "name": "Last-week"
+      },
+      "intent": "Last-week",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "eyj78U"
+          },
+          "activity": "${SendActivity_eyj78U()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "BEMq7O",
+        "name": "This-month"
+      },
+      "intent": "This-month",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "623jFn"
+          },
+          "activity": "${SendActivity_623jFn()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "t0pEPB",
+        "name": "Last-month"
+      },
+      "intent": "Last-month",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "XSMunS"
+          },
+          "activity": "${SendActivity_XSMunS()}"
         }
       ]
     }
   ],
   "generator": "ConnectAccount.lg",
-  "recognizer": "ConnectAccount.lu.qna",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "Today",
+        "pattern": "Today"
+      },
+      {
+        "intent": "This-week",
+        "pattern": "This week"
+      },
+      {
+        "intent": "Last-week",
+        "pattern": "Last week"
+      },
+      {
+        "intent": "This-month",
+        "pattern": "This month"
+      },
+      {
+        "intent": "Last-month",
+        "pattern": "Last month"
+      }
+    ]
+  },
   "id": "ConnectAccount"
 }

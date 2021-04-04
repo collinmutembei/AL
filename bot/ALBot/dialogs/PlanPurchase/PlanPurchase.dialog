@@ -2,7 +2,7 @@
   "$kind": "Microsoft.AdaptiveDialog",
   "$designer": {
     "id": "fGKUMQ",
-    "name": "PlanPurchase",
+    "name": "PlanFinances",
     "description": "Prompt purchase details"
   },
   "autoEndDialog": true,
@@ -24,9 +24,97 @@
           "activity": "${SendActivity_SORnwA()}"
         }
       ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "f6xQNC",
+        "name": "Food"
+      },
+      "intent": "Food",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "8Dtiuh"
+          },
+          "activity": "${SendActivity_8Dtiuh()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "KoUEKC"
+          },
+          "activity": "${SendActivity_KoUEKC()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "5Aua8W",
+        "name": "Transport"
+      },
+      "intent": "Transport",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "uBNF0I"
+          },
+          "activity": "${SendActivity_uBNF0I()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "IkAWMr"
+          },
+          "activity": "${SendActivity_IkAWMr()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "QVQjtT",
+        "name": "Shopping"
+      },
+      "intent": "Shopping",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "USRE1x"
+          },
+          "activity": "${SendActivity_USRE1x()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "V52Uz8"
+          },
+          "activity": "${SendActivity_V52Uz8()}"
+        }
+      ]
     }
   ],
   "generator": "PlanPurchase.lg",
-  "recognizer": "PlanPurchase.lu.qna",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "Food",
+        "pattern": "Food"
+      },
+      {
+        "intent": "Transport",
+        "pattern": "Transport"
+      },
+      {
+        "intent": "Shopping",
+        "pattern": "Shopping"
+      }
+    ]
+  },
   "id": "PlanPurchase"
 }

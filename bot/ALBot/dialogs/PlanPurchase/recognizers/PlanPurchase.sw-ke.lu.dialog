@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_PlanPurchase",
+  "applicationId": "=settings.luis.PlanPurchase_sw_ke_lu.appId",
+  "version": "=settings.luis.PlanPurchase_sw_ke_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}

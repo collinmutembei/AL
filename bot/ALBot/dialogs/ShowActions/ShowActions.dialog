@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "8Fynri",
+    "name": "ShowActions",
+    "description": "Show button to easily begin offering assistance to user"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "SelectAction",
+        "description": "",
+        "id": "v58V5R"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Oxaah2"
+          },
+          "activity": "${SendActivity_Oxaah2()}"
+        }
+      ]
+    }
+  ],
+  "generator": "ShowActions.lg",
+  "recognizer": "ShowActions.lu.qna",
+  "id": "ShowActions"
+}

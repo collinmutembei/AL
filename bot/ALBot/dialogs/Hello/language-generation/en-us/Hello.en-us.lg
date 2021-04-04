@@ -1,0 +1,12 @@
+[import](common.lg)
+
+# TextInput_Prompt_xLwoWC()
+[Activity
+    Text = ${AskName()}
+]
+
+# SendActivity_tpo1cA()
+[Activity
+    Text = It's a real honor to be chatting with you ${$user.name}
+]
+

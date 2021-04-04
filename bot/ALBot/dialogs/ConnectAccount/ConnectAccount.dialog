@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "vcpUD2",
+    "name": "ConnectAccount",
+    "description": "Initiate prompts to connect account"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "AccountDetails",
+        "description": "",
+        "id": "I5cKfI"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "s14rXk"
+          },
+          "activity": "${SendActivity_s14rXk()}"
+        }
+      ]
+    }
+  ],
+  "generator": "ConnectAccount.lg",
+  "recognizer": "ConnectAccount.lu.qna",
+  "id": "ConnectAccount"
+}

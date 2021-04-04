@@ -143,9 +143,3 @@ Message Box
     height: 63vh;
   }
 }
-
-@media screen and (min-width: 834px) and (max-height: 1366px) {
-  .bot {
-    height: 48vh;
-  }
-}

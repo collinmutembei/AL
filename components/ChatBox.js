@@ -35,17 +35,16 @@ export default class ChatBox extends React.Component {
         m = d.getMinutes();
         $(
           "<div class='timestamp'>" + d.getHours() + ":" + m + "</div>"
-        ).appendTo($("#message:last"));
+        ).appendTo($(".message:last"));
       }
     }
 
     function insertMessage() {
       let msg = $("#message-input").val();
-      console.log(msg);
       if ($.trim(msg) == "") {
         return false;
       }
-      $("<div id='message' class='message message-personal'>" + msg + "</div>")
+      $("<div class='message message-personal'>" + msg + "</div>")
         .appendTo($(".mCSB_container"))
         .addClass("new");
       setDate();
@@ -88,14 +87,14 @@ export default class ChatBox extends React.Component {
         return false;
       }
       $(
-        '<div class="message loading new"><figure class="avatar"><img width="20px" height="20px" src="https://al.collinmutembei.dev/logo.png" /></figure><span></span></div>'
+        '<div class="message loading new"><figure class="avatar"><img height="10px" width="10px" src="/logo.png" /></figure><span></span></div>'
       ).appendTo($(".mCSB_container"));
       updateScrollbar();
 
       setTimeout(function () {
-        $("#message.loading").remove();
+        $(".message.loading").remove();
         $(
-          '<div class="message new"><figure class="avatar"><img width="20px" height="20px" src="https://al.collinmutembei.dev/logo.png" /></figure>' +
+          '<div class="message new"><figure class="avatar"><img height="10px" width="10px" src="/logo.png" /></figure>' +
             Fake[i] +
             "</div>"
         )

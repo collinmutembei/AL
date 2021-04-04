@@ -32,6 +32,7 @@ const Header = () => {
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css"
       ></link>
+      <link rel="stylesheet" href="/styles/messages.css"></link>
     </Head>
   );
 };

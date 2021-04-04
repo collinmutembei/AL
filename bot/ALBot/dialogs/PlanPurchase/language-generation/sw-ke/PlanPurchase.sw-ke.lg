@@ -1,0 +1,6 @@
+[import](common.lg)
+
+# SendActivity_SORnwA()
+[Activity
+    Text = What would you like to purchase?
+]

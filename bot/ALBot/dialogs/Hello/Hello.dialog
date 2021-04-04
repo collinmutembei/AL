@@ -1,0 +1,62 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "2P0Zz9",
+    "name": "Hello",
+    "description": "Introductions"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "CaptureUserName",
+        "description": "",
+        "id": "mvcmNB"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "xLwoWC"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "prompt": "${TextInput_Prompt_xLwoWC()}",
+          "property": "$user.name"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "tpo1cA"
+          },
+          "activity": "${SendActivity_tpo1cA()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "DItsvc"
+          },
+          "activityProcessed": true,
+          "dialog": "ShowActions"
+        }
+      ]
+    }
+  ],
+  "generator": "Hello.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "TextInput_Response_xLwoWC",
+        "pattern": "Lebron"
+      }
+    ]
+  },
+  "id": "Hello"
+}

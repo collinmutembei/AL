@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "fGKUMQ",
+    "name": "PlanPurchase",
+    "description": "Prompt purchase details"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "PurchaseDetails",
+        "description": "",
+        "id": "raXbAQ"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "SORnwA"
+          },
+          "activity": "${SendActivity_SORnwA()}"
+        }
+      ]
+    }
+  ],
+  "generator": "PlanPurchase.lg",
+  "recognizer": "PlanPurchase.lu.qna",
+  "id": "PlanPurchase"
+}

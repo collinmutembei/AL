@@ -1,12 +1,7 @@
 [import](common.lg)
 
-# TextInput_Prompt_xLwoWC()
-[Activity
-    Text = ${AskName()}
-]
 
-# SendActivity_tpo1cA()
+# SendActivity_xPT14o()
 [Activity
-    Text = It's a real honor to be chatting with you ${$user.name}
+    Text = Welcome, you are now logged in.
 ]
-

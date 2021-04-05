@@ -2,7 +2,7 @@
 
 # SendActivity_Oxaah2()
 [Activity
-    Text = How can I be of help?
-    SuggestedActions = Connect Account | Plan for a purchase
+    Text = Here are actions I can help you with. What would you like to do?
+    SuggestedActions = Review my finances | Plan my finances
 ]
 

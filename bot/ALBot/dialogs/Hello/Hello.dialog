@@ -2,7 +2,7 @@
   "$kind": "Microsoft.AdaptiveDialog",
   "$designer": {
     "id": "2P0Zz9",
-    "name": "Hello",
+    "name": "AuthenticateUser",
     "description": "Introductions"
   },
   "autoEndDialog": true,
@@ -11,31 +11,30 @@
     {
       "$kind": "Microsoft.OnBeginDialog",
       "$designer": {
-        "name": "CaptureUserName",
+        "name": "CaptureUserDetails",
         "description": "",
         "id": "mvcmNB"
       },
       "actions": [
         {
-          "$kind": "Microsoft.TextInput",
+          "$kind": "Microsoft.OAuthInput",
           "$designer": {
-            "id": "xLwoWC"
+            "id": "jXmVDb"
           },
-          "disabled": false,
+          "timeout": 900000,
           "maxTurnCount": 3,
-          "alwaysPrompt": false,
           "allowInterruptions": false,
-          "unrecognizedPrompt": "",
-          "invalidPrompt": "",
-          "prompt": "${TextInput_Prompt_xLwoWC()}",
-          "property": "$user.name"
+          "connectionName": "MS-OAuth",
+          "text": "${AuthenticateUser()}",
+          "title": "Login with your Microsoft Account",
+          "property": "dialog.token"
         },
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "tpo1cA"
+            "id": "xPT14o"
           },
-          "activity": "${SendActivity_tpo1cA()}"
+          "activity": "${SendActivity_xPT14o()}"
         },
         {
           "$kind": "Microsoft.BeginDialog",

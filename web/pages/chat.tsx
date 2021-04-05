@@ -1,10 +1,10 @@
 import ChatBox from "@/components/ChatBox";
 
-const Chat = (props) => {
-  return <ChatBox token={props.token} />;
+const Chat = ({token}) => {
+  return <ChatBox token={token} />;
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps(context) {
   const url = "https://webchat.botframework.com/api/tokens";
   const params = {
     "headers": {

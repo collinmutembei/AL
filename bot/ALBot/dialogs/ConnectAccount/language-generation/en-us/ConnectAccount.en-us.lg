@@ -1,6 +1,32 @@
 [import](common.lg)
 
-# SendActivity_s14rXk()
+# SendActivity_eLaK29()
 [Activity
-    Text = What kind of account would you like to connect?
+    Text = How far back?
+    SuggestedActions = Today | This week | This month | Last month
+]
+
+# SendActivity_GdIJGK()
+[Activity
+    Text = Here are your transactions from today.
+]
+
+# SendActivity_Edstp1()
+[Activity
+    Text = Here are your transactions from this week.
+]
+
+# SendActivity_eyj78U()
+[Activity
+    Text = Here are your transactions from last week.
+]
+
+# SendActivity_623jFn()
+[Activity
+    Text = Here are your transactions from this month.
+]
+
+# SendActivity_XSMunS()
+[Activity
+    Text = Here are your transactions from last month.
 ]

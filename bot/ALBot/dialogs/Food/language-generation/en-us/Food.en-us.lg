@@ -1,0 +1,11 @@
+[import](common.lg)
+
+# SendActivity_nbTm1k()
+[Activity
+    Text = Your food budget for today is 1000 KES.
+]
+
+# SendActivity_2QJyBJ()
+[Activity
+    Text = How much do you want to plan for?
+]

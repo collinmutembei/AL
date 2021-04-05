@@ -41,16 +41,39 @@
                   "activity": "${SendActivity_Welcome()}"
                 },
                 {
-                  "$kind": "Microsoft.BeginDialog",
+                  "$kind": "Microsoft.TextInput",
                   "$designer": {
-                    "id": "fpxzW9"
+                    "id": "zPxYdj"
                   },
-                  "activityProcessed": true,
-                  "dialog": "Hello"
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "prompt": "${TextInput_Prompt_zPxYdj()}",
+                  "property": "user.name"
                 }
               ]
             }
-          ]
+          ],
+          "value": "dialog.foreach.value"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "rMFKaO"
+          },
+          "activity": "${SendActivity_rMFKaO()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "37FZYS"
+          },
+          "activityProcessed": true,
+          "dialog": "ShowActions"
         }
       ]
     },
@@ -83,7 +106,7 @@
         {
           "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "E9Cb0K"
+            "id": "sI0Kvc"
           },
           "activityProcessed": true,
           "dialog": "PlanPurchase"

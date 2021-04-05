@@ -1,0 +1,126 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "YVKjGf",
+    "name": "Categories",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BudgetCategories",
+        "description": "",
+        "id": "UUBtSq"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "9WjMyo"
+          },
+          "condition": "user.budget.category",
+          "cases": [
+            {
+              "value": "Food",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "ytZTt2"
+                  },
+                  "activity": "${SendActivity_ytZTt2()}"
+                },
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "050ewh"
+                  },
+                  "property": "user.budget.food",
+                  "value": "1000"
+                },
+                {
+                  "$kind": "Microsoft.NumberInput",
+                  "$designer": {
+                    "id": "6GzXvJ"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": true,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "prompt": "${NumberInput_Prompt_6GzXvJ()}",
+                  "property": "user.budget.food"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "owKS7H"
+                  },
+                  "activity": "${SendActivity_owKS7H()}"
+                }
+              ]
+            },
+            {
+              "value": "Transport",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "8jXNmK"
+                  },
+                  "activity": "${SendActivity_8jXNmK()}"
+                },
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "Sud4Ox"
+                  },
+                  "property": "user.budget.transport",
+                  "value": "1000"
+                },
+                {
+                  "$kind": "Microsoft.NumberInput",
+                  "$designer": {
+                    "id": "fy27ny"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": true,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "prompt": "${NumberInput_Prompt_fy27ny()}",
+                  "property": "user.budget.transport"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "VoOK6C"
+                  },
+                  "activity": "${SendActivity_VoOK6C()}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "noJRui"
+          },
+          "activityProcessed": true,
+          "dialog": "ShowActions"
+        }
+      ]
+    }
+  ],
+  "generator": "Categories.lg",
+  "recognizer": "Categories.lu.qna",
+  "id": "Categories"
+}

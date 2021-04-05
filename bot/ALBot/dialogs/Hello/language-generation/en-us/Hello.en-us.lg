@@ -1,7 +1,0 @@
-[import](common.lg)
-
-
-# SendActivity_xPT14o()
-[Activity
-    Text = Welcome, you are now logged in.
-]

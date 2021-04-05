@@ -1,5 +1,8 @@
 # WelcomeUser()
 - Hello, I'm AL. I exist to help you interact with your financial data, for the better!
 
-# AuthenticateUser()
-- Please sign in to continue
+# AskUserName()
+- What is your name?
+
+# PlanQuestion()
+- How much do you want to plan for?

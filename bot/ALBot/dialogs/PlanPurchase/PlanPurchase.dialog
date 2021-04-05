@@ -2,7 +2,7 @@
   "$kind": "Microsoft.AdaptiveDialog",
   "$designer": {
     "id": "fGKUMQ",
-    "name": "PlanFinances",
+    "name": "Plan",
     "description": "Prompt purchase details"
   },
   "autoEndDialog": true,
@@ -11,89 +11,47 @@
     {
       "$kind": "Microsoft.OnBeginDialog",
       "$designer": {
-        "name": "PurchaseDetails",
-        "description": "",
-        "id": "raXbAQ"
+        "id": "Rcb7i9",
+        "name": "CategoriesDialog"
       },
       "actions": [
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "SORnwA"
+            "id": "lU33Yj"
           },
-          "activity": "${SendActivity_SORnwA()}"
-        }
-      ]
-    },
-    {
-      "$kind": "Microsoft.OnIntent",
-      "$designer": {
-        "id": "f6xQNC",
-        "name": "Food"
-      },
-      "intent": "Food",
-      "actions": [
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "8Dtiuh"
-          },
-          "activity": "${SendActivity_8Dtiuh()}"
+          "activity": "${SendActivity_lU33Yj()}"
         },
         {
-          "$kind": "Microsoft.SendActivity",
+          "$kind": "Microsoft.SetProperty",
           "$designer": {
-            "id": "KoUEKC"
+            "id": "lJObJI"
           },
-          "activity": "${SendActivity_KoUEKC()}"
-        }
-      ]
-    },
-    {
-      "$kind": "Microsoft.OnIntent",
-      "$designer": {
-        "id": "5Aua8W",
-        "name": "Transport"
-      },
-      "intent": "Transport",
-      "actions": [
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "uBNF0I"
-          },
-          "activity": "${SendActivity_uBNF0I()}"
+          "property": "user.accounts.balance",
+          "value": "10000"
         },
         {
-          "$kind": "Microsoft.SendActivity",
+          "$kind": "Microsoft.TextInput",
           "$designer": {
-            "id": "IkAWMr"
+            "id": "YPLAqZ"
           },
-          "activity": "${SendActivity_IkAWMr()}"
-        }
-      ]
-    },
-    {
-      "$kind": "Microsoft.OnIntent",
-      "$designer": {
-        "id": "QVQjtT",
-        "name": "Shopping"
-      },
-      "intent": "Shopping",
-      "actions": [
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "USRE1x"
-          },
-          "activity": "${SendActivity_USRE1x()}"
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${TextInput_Prompt_YPLAqZ()}",
+          "property": "user.budget.category"
         },
         {
-          "$kind": "Microsoft.SendActivity",
+          "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "V52Uz8"
+            "id": "yTpKnM"
           },
-          "activity": "${SendActivity_V52Uz8()}"
+          "activityProcessed": true,
+          "dialog": "Categories"
         }
       ]
     }
@@ -101,20 +59,7 @@
   "generator": "PlanPurchase.lg",
   "recognizer": {
     "$kind": "Microsoft.RegexRecognizer",
-    "intents": [
-      {
-        "intent": "Food",
-        "pattern": "Food"
-      },
-      {
-        "intent": "Transport",
-        "pattern": "Transport"
-      },
-      {
-        "intent": "Shopping",
-        "pattern": "Shopping"
-      }
-    ]
+    "intents": []
   },
   "id": "PlanPurchase"
 }

@@ -1,0 +1,21 @@
+[import](common.lg)
+
+# SendActivity_fXGSNU()
+[Activity
+    Text = Here are your transactions from ${user.transactions.since[0].Start} - ${user.transactions.since[0].End}.
+]
+
+# SendActivity_laUWVu()
+[Activity
+    Text = Here are your transactions from ${user.transactions.since[0].Value}.
+]
+
+# SendActivity_FGqeqc()
+[Activity
+    Text = ${SendActivity_FGqeqc_text()}
+]
+
+# SendActivity_FGqeqc_text()
+- ```Food: 120 KES
+Transport: 50 KES
+Shopping: 30 KES```

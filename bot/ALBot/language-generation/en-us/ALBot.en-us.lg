@@ -2,3 +2,13 @@
 
 # SendActivity_Welcome
 - ${WelcomeUser()}
+
+# SendActivity_rMFKaO()
+[Activity
+    Text = Welcome ${user.name}
+]
+
+# TextInput_Prompt_zPxYdj()
+[Activity
+    Text = ${AskUserName()}
+]

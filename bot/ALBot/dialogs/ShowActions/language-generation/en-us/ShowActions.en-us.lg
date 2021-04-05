@@ -2,7 +2,6 @@
 
 # SendActivity_Oxaah2()
 [Activity
-    Text = Here are actions I can help you with. What would you like to do?
+    Text = What would you like to do?
     SuggestedActions = Review my finances | Plan my finances
 ]
-

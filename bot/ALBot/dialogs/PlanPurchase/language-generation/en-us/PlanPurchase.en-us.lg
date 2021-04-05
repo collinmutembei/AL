@@ -36,3 +36,77 @@
 [Activity
     Text = How much do you want to plan for?
 ]
+
+# SendActivity_quVfaW()
+[Activity
+    Text = You have 10000 KES in your accounts
+]
+
+# SendActivity_zKt28u()
+[Activity
+    Text = You have 10000 KES in your accounts
+]
+
+# SendActivity_MCLiik()
+[Activity
+    Text = What would you like to plan for?
+    SuggestedActions = Food | Transport | Shopping
+]
+
+
+# SendActivity_Lao7ex()
+[Activity
+    Text = Your food budget for today is 1000 KES.
+]
+
+# SendActivity_URemS4()
+[Activity
+    Text = You have updated your food budget for today to ${user.budget.food}
+]
+
+# SendActivity_Lx13Fc()
+[Activity
+    Text = Your transport budget for today is 1000 KES.
+]
+
+# NumberInput_Prompt_cySOMR()
+[Activity
+    Text = ${PlanQuestion()}
+]
+
+# SendActivity_szdBIl()
+[Activity
+    Text = You have updated your transport budget for today to ${user.budget.transport}
+]
+
+# SendActivity_Xdr7vk()
+[Activity
+    Text = Your shopping budget for today is 500 KES.
+]
+
+# NumberInput_Prompt_OaxyLN()
+[Activity
+    Text = ${PlanQuestion()}
+]
+
+# NumberInput_Prompt_PkP9TE()
+[Activity
+    Text = ${PlanQuestion()}
+]
+
+# SendActivity_4pndhA()
+[Activity
+    Text = You have updated your shopping budget for today to ${user.budget.shopping}
+]
+
+# SendActivity_lU33Yj()
+[Activity
+    Text = You have 10000 KES in your accounts
+]
+
+# TextInput_Prompt_YPLAqZ()
+[Activity
+    Text = What would you like to plan for?
+    SuggestedActions = Food | Transport | Shopping
+]
+

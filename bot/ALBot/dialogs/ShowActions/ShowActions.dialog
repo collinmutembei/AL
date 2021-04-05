@@ -27,6 +27,9 @@
     }
   ],
   "generator": "ShowActions.lg",
-  "recognizer": "ShowActions.lu.qna",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
   "id": "ShowActions"
 }

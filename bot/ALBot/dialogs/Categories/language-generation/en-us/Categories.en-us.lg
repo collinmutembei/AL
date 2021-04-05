@@ -1,0 +1,31 @@
+[import](common.lg)
+
+# SendActivity_ytZTt2()
+[Activity
+    Text = Your food budget for today is 1000 KES.
+]
+
+# NumberInput_Prompt_6GzXvJ()
+[Activity
+    Text = ${PlanQuestion()}
+]
+
+# SendActivity_owKS7H()
+[Activity
+    Text = You have updated your food budget for today to ${user.budget.food}
+]
+
+# SendActivity_8jXNmK()
+[Activity
+    Text = Your transport budget for today is 1000 KES.
+]
+
+# NumberInput_Prompt_fy27ny()
+[Activity
+    Text = ${PlanQuestion()}
+]
+
+# SendActivity_VoOK6C()
+[Activity
+    Text = You have updated your transport budget for today to ${user.budget.transport}
+]

@@ -1,11 +1,5 @@
 [import](common.lg)
 
-# SendActivity_eLaK29()
-[Activity
-    Text = How far back?
-    SuggestedActions = Today | This week | This month | Last month
-]
-
 # SendActivity_GdIJGK()
 [Activity
     Text = Here are your transactions from today.
@@ -29,4 +23,15 @@
 # SendActivity_XSMunS()
 [Activity
     Text = Here are your transactions from last month.
+]
+
+# SendActivity_nBM7v9()
+[Activity
+    Text = Here are your transactions from today.
+]
+
+# DateTimeInput_Prompt_pG3XaZ()
+[Activity
+    Text = From when?
+    SuggestedActions = Today | This week | This month | Last month
 ]

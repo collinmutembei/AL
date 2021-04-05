@@ -1,0 +1,65 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "DyPMGh",
+    "name": "Transactions",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "DurationDialog",
+        "description": "",
+        "id": "SLpcnF"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "eQ7mnD"
+          },
+          "condition": "= bool(${user.transactions.since[0].Value})",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "fXGSNU"
+              },
+              "activity": "${SendActivity_fXGSNU()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "laUWVu"
+              },
+              "activity": "${SendActivity_laUWVu()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "FGqeqc"
+          },
+          "activity": "${SendActivity_FGqeqc()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "pSV14H"
+          },
+          "activityProcessed": true,
+          "dialog": "ShowActions"
+        }
+      ]
+    }
+  ],
+  "generator": "Transactions.lg",
+  "recognizer": "Transactions.lu.qna",
+  "id": "Transactions"
+}

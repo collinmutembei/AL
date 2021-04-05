@@ -112,6 +112,24 @@
           "dialog": "PlanPurchase"
         }
       ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "CvonNt",
+        "name": "Exit"
+      },
+      "intent": "Exit",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "PZQnjn"
+          },
+          "activityProcessed": true,
+          "dialog": "Exit"
+        }
+      ]
     }
   ],
   "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
@@ -127,6 +145,10 @@
       {
         "intent": "plan",
         "pattern": "Plan my finances"
+      },
+      {
+        "intent": "Exit",
+        "pattern": "Exit"
       }
     ]
   }

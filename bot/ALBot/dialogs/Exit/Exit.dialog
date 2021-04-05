@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "VZlODT",
+    "name": "Exit",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "ExitSession",
+        "description": "",
+        "id": "USla7h"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.CancelAllDialogs",
+          "$designer": {
+            "id": "chgROu"
+          },
+          "activityProcessed": true
+        }
+      ]
+    }
+  ],
+  "generator": "Exit.lg",
+  "recognizer": "Exit.lu.qna",
+  "id": "Exit"
+}
